@@ -6,7 +6,47 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+html {
+    --fontBold: 600;
+    --font1Desktop: 48px;
+    --font1Mobile: 36px;
+    --font1DesktopLineHeight: 50px;
+    --font1MobileLineHeight: 44px;
+  
+    --font2Desktop: 32px;
+    --font2Mobile: 28px;
+    --font2DesktopLineHeight: 44px;
+    --font2MobileLineHeight: 34px;
+  
+    --font3Desktop: 24px;
+    --font3Mobile: 18px;
+    --font3DesktopLineHeight: 32px;
+    --font3MobileLineHeight: 28px;
+  
+    --font4Desktop: 20px;
+    --font4Mobile: 18px;
+    --font4DesktopLineHeight: 30px;
+    --font4MobileLineHeight: 28px;
+  
+    --font5Desktop: 16px;
+    --font5Mobile: 14px;
+    --font5DesktopLineHeight: 24px;
+    --font5MobileLineHeight: 20px;
+  
+    --fontHelper: 12px;
+    --fontWeightHelper: 300;
+    --font6Desktop: 14px;
+    --font6Mobile: 14px;
+    --font6DesktopLineHeight: 20px;
+    --font6MobileLineHeight: 20px;
+  
+    --font7Desktop: 12px;
+    --font7Mobile: 12px;
+    --font7DesktopLineHeight: 20px;
+    --font7MobileLineHeight: 20px;
+    --primary-color: #595e62;
+    --secondary-color: #cdcecf;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
