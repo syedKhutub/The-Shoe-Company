@@ -1,0 +1,62 @@
+.container {
+    padding: 16px 32px;
+    min-height: 350px;
+    max-height: 350px;
+    border: 0.5px solid #000;
+    min-width: 250px;
+    max-width: 250px;
+    border-radius: 16px;
+    color: #000;
+    display: flex;
+}
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+.brand-name {
+    color: var(--primary-color);
+    font-weight: var(--fontBold);
+}
+.product-name {
+    color: var(--secondary-color)
+}
+.image {
+    width: 100%;
+}
+.image-container {
+    width: 100%;
+}
+.shoe-details {
+    font-size: var(--font5Desktop);
+    text-align: left;
+}
+.price-container {
+    display: flex;
+    justify-content: space-between;
+}
+.price-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font5Desktop);
+}
+.price-label {
+    color: var(--secondary-color);
+}
+.price {
+    color: var(--primary-color);
+    font-weight: var(--fontBold);
+}
+.small-images-container {
+    display: flex;
+    min-width: 100px;
+    max-width: 100px;
+    justify-content: space-between;
+}
+.small-images {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #000;
+    border-radius: 8px;
+}
