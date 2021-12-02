@@ -3,6 +3,7 @@ import CustomCheckbox from '../../components/Checkbox';
 import clsx from 'clsx';
 import { FILTERLIST } from './constants';
 import Button from '../../components/Button';
+import MultiRangeSlider from '../../components/RangeSlider';
 import './css/index.css';
 
 const Filter = ({
@@ -54,6 +55,11 @@ const Filter = ({
           Clear Filter
         </Button>
       </div>
+      <div className={'filterListContainer'}>
+            <div className={'filterLabel'}>Price Range</div>
+            <MultiRangeSlider min='10' max='100'  onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}/>
+            </div>
+        <hr />
       {FILTERLIST.map((filter) => {
         return (
           <>

@@ -5,6 +5,7 @@
     font-size: var(--font4Desktop);
     font-weight: var(--fontBold);
     margin: 16px 0px;
+    text-align: left;
   }
 .optionsContainer{
     display: flex;
