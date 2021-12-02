@@ -1,12 +1,11 @@
 import React from 'react';
 import Card from '../../components/Card';
-import { ALL_SHOES } from './constants';
 import './css/index.css';
 
-const Dashboard = () => {
+const Dashboard = ({data}) => {
     return (
         <div className='dashboard-container'>
-            {ALL_SHOES.map((shoe) => {
+            {data.map((shoe) => {
                 return (
                     <Card 
                         productName={shoe.productName}
