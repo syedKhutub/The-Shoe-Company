@@ -16,10 +16,14 @@ function Homepage() {
             categories: [],
             size: []
         });
+        setSliderValue([500,10000])
+        setDataToRender(ALL_SHOES)
     };
     useEffect(() => {
-        filterOnPrice(sliderValue[0], sliderValue[1])
-    }, [sliderValue])
+        applyFilters()
+    }, [sliderValue, selectedFilter.categories, selectedFilter.size] );
+
+    
     const disableClearFilterButton = () => {
         if (
             (selectedFilter.categories.length ||
@@ -29,6 +33,42 @@ function Homepage() {
         }
         return false;
     };
+    const applyFilters = () => {
+        let shoesFiltered = ALL_SHOES.filter((shoe) => {
+            return shoe.price >= sliderValue[0] && shoe.price <= sliderValue[1]
+        })
+        if(selectedFilter.categories.length > 0) {
+            shoesFiltered = shoesFiltered.filter((shoe) => {
+                let found = selectedFilter.categories.find(
+                    (category) =>
+                    category === shoe.category
+                );
+                return found !== undefined;
+            });
+        }
+        if(selectedFilter.size.length > 0) {
+            shoesFiltered = shoesFiltered.filter((shoe) => {
+                if (shoe.size && shoe.size.length) {
+                  let found = shoe.size.find((data) => {
+                    let foundInSearchList = selectedFilter.size.find(
+                      (shoeSize) =>{
+                          debugger
+                          return (
+                              shoeSize === data
+                          )
+                      }
+                    );
+                    return foundInSearchList !== undefined;
+                  });
+                  return found !== undefined;
+                }
+                return false;
+              });
+        }
+        debugger
+        setDataToRender(shoesFiltered)
+    }
+
     const isOptionSelected = (filterName, filterOption) => {
         let modifiedState = JSON.parse(JSON.stringify(selectedFilter));
         return modifiedState[filterName].includes(filterOption);
@@ -44,12 +84,6 @@ function Homepage() {
         }
         setSelectedFilter(modifiedState);
     };
-    const filterOnPrice = (minimumPrice, maximumPrice) => {
-        let shoesFilteredOnPrice = ALL_SHOES.filter((shoe) => {
-            return shoe.price >= minimumPrice && shoe.price <= maximumPrice
-        })
-        setDataToRender(shoesFilteredOnPrice);
-    }
     const onChangeRangeSelector = (e, newSlidervalue) => {
         setSliderValue(newSlidervalue)
     }
@@ -58,7 +92,6 @@ function Homepage() {
         <div style={{ display: 'flex'}}>
             <Filter 
                 handleChangeCheckbox={handleChangeCheckbox}
-                //    applyFilters={applyFilters}
                 clearFilter={clearFilter}
                 isOptionSelected={isOptionSelected}
                 disableClearFilterButton={disableClearFilterButton}
