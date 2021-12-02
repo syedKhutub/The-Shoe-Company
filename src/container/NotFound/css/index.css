@@ -1,0 +1,111 @@
+/* 
+  homeButton: {
+    width: '180px';
+    height: '54px';
+    background: theme.palette.primary.main;
+    color: theme.palette.common.white;
+    textTransform: 'capitalize';
+    [theme.breakpoints.down(768)]: {
+      width: '130px';
+      height: '40px';
+    };
+  };
+  contactUsButton: {
+    width: '180px';
+    height: '54px';
+    background: theme.palette.common.white;
+    color: theme.palette.primary.main;
+    textTransform: 'capitalize';
+    [theme.breakpoints.down(768)]: {
+      width: '130px';
+      height: '40px';
+    };
+  };
+  
+  errorContainer: {
+    display: 'flex';
+    flex-direction: 'column';
+    align-items: 'center';
+  };
+  errorWrapper: {
+    display: 'flex';
+    flex-direction: 'column';
+    align-items: 'center';
+    justify-content: 'center';
+    max-width: '80%';
+    min-width: '80%',
+    marginBottom: '40px',
+  },
+  errorResponse: {
+    color: '#818C8B',
+    fontSize: TYPOGRAPHY_CONSTANT.font3Desktop,
+    lineHeight: TYPOGRAPHY_CONSTANT.font3DesktopLineHeight,
+    marginBottom: theme.spacing(3),
+    textAlign: 'center',
+  },
+  errorMessage: {
+    color: '#2D4642',
+    textAlign: 'center',
+    fontSize: TYPOGRAPHY_CONSTANT.font5Desktop,
+    lineHeight: TYPOGRAPHY_CONSTANT.font5DesktopLineHeight,
+  },
+  buttonContainer: {
+    display: 'flex',
+    justify-content: 'space-around',
+    max-width: '80%',
+    min-width: '80%',
+    // [theme.breakpoints.down(768)]: {
+    //   max-width: '80%',
+    //   min-width: '80%',
+    // }
+  },
+  link: {
+    textDecoration: 'none',
+  },
+  logo: {
+    width: '60px',
+    height: '60px',
+    color: theme.palette.primary.main,
+    marginBottom: '24px',
+  },
+})); */
+
+.error-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 89vh;
+    width: 100%;
+    background: #F5F5F8;
+  }
+  .errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .errorWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    min-width: 80%;
+    margin: 0px 0px 40px 0px;
+  }
+  .logo {
+    width: 60px;
+    height: 60px;
+    color: red;
+    margin-bottom: 24px;
+  }
+  .errorMessage {
+    color: #2D4642;
+    text-align: center;
+    font-size:   var(--font5Desktop);
+  }
+  .errorResponse {
+    color: #818C8B;
+    font-size: var(--font3Desktop);
+    margin-bottom: 24px;
+    text-align: center
+  }
