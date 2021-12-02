@@ -8,7 +8,6 @@ import './css/index.css';
 
 const Filter = ({
   handleChangeCheckbox,
-  applyFilters,
   clearFilter,
   isOptionSelected,
   disableClearFilterButton,
@@ -42,12 +41,6 @@ const Filter = ({
   return (
     <div className='filterContainer'>
       <div className='buttonContainer'>
-        <Button
-          className={clsx('button', 'apply')}
-          onClick={() => applyFilters()}
-        >
-          Apply Filter
-        </Button>
         <Button
           className={clsx('button', 
           {
