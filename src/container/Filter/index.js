@@ -8,10 +8,9 @@ import './css/index.css';
 
 const Filter = ({
   handleChangeCheckbox,
-  handleOnClickClose,
   applyFilters,
   clearFilter,
-//   isOptionSelected,
+  isOptionSelected,
   disableClearFilterButton,
 }) => {
 
@@ -27,7 +26,7 @@ const Filter = ({
                     handleChangeCheckbox(filter_name, option.value);
                   }}
                   className='checkbox'
-                //   checked={isOptionSelected(filter_name, option.value)}
+                  checked={isOptionSelected(filter_name, option.value)}
                   name={option.label}
                 />
                 <div className='option'>{option.label}</div>
@@ -48,9 +47,13 @@ const Filter = ({
           Apply Filter
         </Button>
         <Button
-          className={clsx('button', 'clear')}
+          className={clsx('button', 
+          {
+              'disabledButton' : disableClearFilterButton(),
+              'clear': !disableClearFilterButton()
+          })}
           onClick={() => clearFilter()}
-        //   disabled={disableClearFilterButton}
+          disabled={disableClearFilterButton()}
         >
           Clear Filter
         </Button>
