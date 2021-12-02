@@ -1,5 +1,7 @@
-.container {
+.filterContainer {
     position: relative;
+    max-width: 300px;
+    width: 100%;
   }
 .filterLabel {
     font-size: var(--font4Desktop);
@@ -24,7 +26,8 @@
   .filterListContainer{
     display: flex;
     flex-direction: column;
-    padding: 16px 32px
+    padding: 16px 32px;
+    border-right: 1px solid #000;
   }
 
   .checkbox{
@@ -34,7 +37,7 @@
     background: none;
   }
   .button{
-    width: 120px;
+    width: 100px;
     text-transform: capitalize;
     border-radius: 64px;
     height: 40px;
@@ -58,5 +61,10 @@
     display: flex;
     width: 100%;
     justify-content: space-around;
-    margin: 24px 0px
-  };
+    padding: 24px 0px;
+    border-right: 1px solid #000;
+  }
+
+  .hr {
+    margin: 0px
+  }

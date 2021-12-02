@@ -39,7 +39,7 @@ const Filter = ({
     );
   };
   return (
-    <div className='container'>
+    <div className='filterContainer'>
       <div className='buttonContainer'>
         <Button
           className={clsx('button', 'apply')}
@@ -55,11 +55,13 @@ const Filter = ({
           Clear Filter
         </Button>
       </div>
+      
+      <hr className='hr' />
       <div className={'filterListContainer'}>
             <div className={'filterLabel'}>Price Range</div>
             <MultiRangeSlider min='10' max='100'  onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}/>
             </div>
-        <hr />
+        <hr className='hr' />
       {FILTERLIST.map((filter) => {
         return (
           <>
@@ -67,7 +69,7 @@ const Filter = ({
               <div className={'filterLabel'}>{filter.filterLabel}</div>
               {renderCheckbboxList(filter.filter_name, filter.options)}
             </div>
-            <hr />
+            <hr className='hr'/>
           </>
         );
       })}
