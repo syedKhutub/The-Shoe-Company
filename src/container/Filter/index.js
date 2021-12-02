@@ -3,7 +3,7 @@ import CustomCheckbox from '../../components/Checkbox';
 import clsx from 'clsx';
 import { FILTERLIST } from './constants';
 import Button from '../../components/Button';
-import MultiRangeSlider from '../../components/RangeSlider';
+import Slider from '@material-ui/core/Slider'
 import './css/index.css';
 
 const Filter = ({
@@ -12,6 +12,8 @@ const Filter = ({
   clearFilter,
   isOptionSelected,
   disableClearFilterButton,
+  sliderValue,
+  onChangeRangeSelector,
 }) => {
 
   const renderCheckbboxList = (filter_name, filter_options) => {
@@ -61,8 +63,8 @@ const Filter = ({
       
       <hr className='hr' />
       <div className={'filterListContainer'}>
-            <div className={'filterLabel'}>Price Range</div>
-            <MultiRangeSlider min='10' max='100'  onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}/>
+            <div className={'filterLabel'}>Price Range (in $)</div>
+              <Slider value={sliderValue} min={500} max={10000} valueLabelDisplay={'auto'} onChange={onChangeRangeSelector}/>
             </div>
         <hr className='hr' />
       {FILTERLIST.map((filter) => {
