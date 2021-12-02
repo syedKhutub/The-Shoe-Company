@@ -3,6 +3,7 @@ import Dashboard from '../Dashboard';
 import Filter from '../Filter';
 import './css/index.css';
 import { ALL_SHOES } from '../Dashboard/constants';
+import ErrorPage from '../NotFound';
 
 function Homepage() {
     const [selectedFilter, setSelectedFilter] = useState({
@@ -52,7 +53,6 @@ function Homepage() {
                   let found = shoe.size.find((data) => {
                     let foundInSearchList = selectedFilter.size.find(
                       (shoeSize) =>{
-                          debugger
                           return (
                               shoeSize === data
                           )
@@ -65,7 +65,6 @@ function Homepage() {
                 return false;
               });
         }
-        debugger
         setDataToRender(shoesFiltered)
     }
 
@@ -98,7 +97,10 @@ function Homepage() {
                 sliderValue={sliderValue}
                 onChangeRangeSelector={onChangeRangeSelector}
             />
-            <Dashboard data={dataToRender} />
+            {
+                dataToRender.length > 0 ? <Dashboard data={dataToRender} /> : <ErrorPage />
+            }
+            
         </div>
     </div>
   );
