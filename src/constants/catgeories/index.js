@@ -1,18 +1,18 @@
 export const CATEGORIES = [
     {
-        value: 'Flip-Flop',
-        label: 'Flip-Flop'
+        value: 'Sports',
+        label: 'Sports'
     },
     {
         value: 'Sneakers',
         label: 'Sneakers'
     },
     {
-        value: 'Lace-up Shoes',
-        label: 'Lace-up Shoes',
+        value: 'Boots',
+        label: 'Boots',
     },
     {
-        value: 'Shoe Accessesories',
-        label: 'Shoe Accessesories'
+        value: 'Formal',
+        label: 'Formal'
     },
 ]
