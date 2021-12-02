@@ -9,8 +9,8 @@ const Card = ({productName, brandName, mainImage, price, smallImage1, smallImage
                     <div className='product-name'>{productName}</div>
                     <div className='brand-name'>{brandName}</div>
                 </div>
-                <div className='.image-container'>
-                    <img className='.image' src={mainImage} alt='shoe' />
+                <div className='image-container'>
+                    <img className='image' src={mainImage} alt='shoe' />
                 </div>
                 <div className='price-container'>
                     <div className='price-wrapper'>
