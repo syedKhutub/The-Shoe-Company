@@ -1,0 +1,61 @@
+.container {
+    position: relative;
+  }
+.filterLabel {
+    font-size: var(--font4Desktop);
+    font-weight: var(--fontBold);
+    margin: 16px 0px;
+  }
+.optionsContainer{
+    display: flex;
+    align-items: center;
+  }
+
+  .option {
+    font-size: var(--font5Desktop);
+    color: #000000;
+    margin: 0px 0px 0px 8px;
+  }
+  .icon{
+    font-size: var(--font4Mobile);
+  }
+
+  .filterListContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 16px 32px
+  }
+
+  .checkbox{
+    color: #2759d9;
+  }
+  .checkbox:hover{
+    background: none;
+  }
+  .button{
+    width: 120px;
+    text-transform: capitalize;
+    border-radius: 64px;
+    height: 40px;
+    color: #fff
+   
+  }
+  .apply{
+    background: #101928
+  }
+  .apply:hover {
+    background: #101928c4;
+  }
+  .clear{
+    background: #f0323c;
+  }
+
+  .clear:hover {
+    background: #f0323ca3;
+  }
+  .buttonContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 24px 0px
+  };
