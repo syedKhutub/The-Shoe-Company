@@ -5,7 +5,7 @@ import './css/index.css';
 import { ALL_SHOES } from '../Dashboard/constants';
 import ErrorPage from '../NotFound';
 
-function Homepage() {
+const Homepage = () => {
     const [selectedFilter, setSelectedFilter] = useState({
         categories: [],
         size: []
