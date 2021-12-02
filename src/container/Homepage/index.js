@@ -22,6 +22,7 @@ const Homepage = () => {
     };
     useEffect(() => {
         applyFilters()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [sliderValue, selectedFilter.categories, selectedFilter.size] );
 
     
